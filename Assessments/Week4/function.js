@@ -25,11 +25,11 @@
 // 3. write a function that takes a number as a parameter and returns that
 // number added by 1
 
-// 4. write a function that takes two number as its parameters and returns then
+// 4. write a function that takes two number as its parameters and returns the
 // addition of those two numbers
 
-// 5. write a function that takes two number as its parameters and returns then
-// squared of those two numbers
+// 5. write a function that takes a number as its parameter and returns the
+// squared of that number
 
 // 6. write a function that takes a number and returns true if the number is odd
 // and false if it is not
