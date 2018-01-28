@@ -8,21 +8,20 @@
 // and `false` if it is not
 
 function isEven(num) {
-  if (num % 2 === 0) {
-   return true;
- } else {
-   return false;
+    if (num % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
-}
 
 // 2. The function Number.isNaN(num) will return true if num is not a number
 // or false if it is.
 // Use Number.isNan to extend your `isEven` function by including an `else if` statement
 // that checks whether a num is a number and
 // console.log => "That is not a number", if it is not a number
-
 function isEvenV2(num) {
-  if (Number.isNaN(num)) {
+if (Number.isNaN(num)) {
     return true;
   }
   else if (isNaN(num)) {
@@ -32,10 +31,6 @@ function isEvenV2(num) {
    return false;
  }
 }
-console.log(isEvenV2(NaN)); // true
-console.log(isEvenV2("I am a string")); // "That is not a number"
-console.log(isEvenV2(100)); // false
-
 // 3. Complete the switch statment in the `getLunchOrder` with the following
 // case conditions:
 // > "sandwich" - console.log => "Sure thing! One sandwich, coming up."
