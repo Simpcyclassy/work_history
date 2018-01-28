@@ -66,3 +66,6 @@ function twoStrings (string1, string2) {
 // 8. write a function that takes the radius of a circle a parameter and returns
 // the Area of the circle.
 // For this exercise π (pie) can equal `3.14`
+function AreaOfTheCircle (radius) {
+  return 3.14 * (radius**2);
+  }
