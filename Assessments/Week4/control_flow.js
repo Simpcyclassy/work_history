@@ -21,16 +21,14 @@ function isEven(num) {
 // that checks whether a num is a number and
 // console.log => "That is not a number", if it is not a number
 function isEvenV2(num) {
-if (Number.isNaN(num)) {
-    return true;
+  if (num % 2 === 0) {
+      return true;
+    } else if (num % 2 > 0){
+      return false;
+    } else if (isNaN(num)) {
+      console.log("That is not a number");
+    }
   }
-  else if (isNaN(num)) {
-    return "That is not a number";
-  }
-   else {
-   return false;
- }
-}
 // 3. Complete the switch statment in the `getLunchOrder` with the following
 // case conditions:
 // > "sandwich" - console.log => "Sure thing! One sandwich, coming up."

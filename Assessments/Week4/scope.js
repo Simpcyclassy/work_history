@@ -20,7 +20,7 @@ function run2() {
     console.log(a);
 }
 run2()
-// Answer = undefined
+// Answer = a is undefined
 
 function run3() {
   const a = 2;
