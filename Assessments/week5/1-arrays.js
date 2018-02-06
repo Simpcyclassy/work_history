@@ -19,28 +19,28 @@
 // 1. write a function that takes an array as its first parameter and returns
 // the first item in the array
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil'];
-function hairProducts(oils) {
+function returnsFirstParameter(oils) {
 return oils.slice(0, 1);
 }
-hairProducts(oils);
+returnsFirstParameter(oils);
 // 2. write a function that takes an array as its first parameter and returns
 // the last item in the array
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil'];
-function groceryLists(oils) {
+function returnsLastParameter(oils) {
 return oils.slice(-1);
 }
-hairProducts(oils);
+returnsLastParameter(oils);
 // 3. write a function that takes an array as its first parameter and a value as
 // its second parameter. The function returns a new array with the value added to
 // beginning of the array.
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil'];
 butter = 'SheaButter';
 
-function hairMassage(oils, butter) {
- oils.unshift(butter);{
-   return oils;}
+function returnsArrayWithBeginningValueAdded(oils, butter) {
+ oils.unshift(butter);
+   return oils;
 }
-hairMassage(oils, butter);
+returnsArrayWithBeginningValueAdded(oils, butter);
 
 // 4. write a function that takes an array as its first parameter and a value as
 // its second parameter. The function returns a new array with the value added to
@@ -48,11 +48,11 @@ hairMassage(oils, butter);
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil'];
 butter = 'SheaButter';
 
-function hairMassage(oils, butter) {
-oils.push(butter);{
+function returnsArrayWithEndValueAdded(oils, butter) {
+oils.push(butter);
   return oils;}
  }
-hairMassage(oils, butter);
+returnsArrayWithEndValueAdded(oils, butter);
 // 5. write a function that takes an array as its first parameter, a value as
 // its second parameter and an index as the third parameter. The function returns
 // a new array where the value can be found at that given index.
@@ -60,10 +60,10 @@ oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil
 butter = 'SheaButter';
 index = 3;
 
- function hairMassage(oils, butter, index) {
- oils[3] = butter; {
+ function returnsNewValueAtAnIndex(oils, butter, index) {
+ oils[index] = butter;
    return oils;
-   }
+
  }
 
- hairMassage(oils, butter, index);
+ returnsNewValueAtAnIndex(oils, butter, index);

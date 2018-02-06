@@ -19,8 +19,8 @@
 // 1. write a function that takes an array as its first parameter and console logs
 // every item in the array
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil', 'Lavender oil', 'Argan oil', 'Almond oil'];
-items(oils);
-function items(oils) {
+printsEachItem(oils);
+function printsEachItem(oils) {
   for (let oilIndex = 0; oilIndex < oils.length; oilIndex++) {
     console.log(oils[oilIndex]);
   }
@@ -28,9 +28,9 @@ function items(oils) {
 
 // 2. write a function that takes an array as its first parameter and console logs
 // every item with an odd index
-oils = oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil', 'Lavender oil', 'Argan oil', 'Almond oil'];
-items(oils);
-function items(oils) {
+oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil', 'Lavender oil', 'Argan oil', 'Almond oil'];
+printsOddIndex(oils);
+function printsOddIndex(oils) {
   for (let oilIndex = 1; oilIndex < oils.length; oilIndex+=2) {
     console.log(oils[oilIndex]);
   }
@@ -39,8 +39,8 @@ function items(oils) {
 // 3. write a function that takes an array as its first parameter and console logs
 // every item with an even index
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil', 'Lavender oil', 'Argan oil', 'Almond oil'];
-items(oils);
-function items(oils) {
+printsEvenIndex(oils);
+function printsEvenIndex(oils) {
   for (let oilIndex = 0; oilIndex < oils.length; oilIndex+=2) {
     console.log(oils[oilIndex]);
   }
@@ -52,7 +52,7 @@ function items(oils) {
 
 oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil', 'Lavender oil', 'Argan oil', 'Almond oil'];
 
-function items(oils, searchValue) {
+function matchesSearchValue(oils, searchValue) {
   for (let oilIndex = 0; oilIndex < oils.length; oilIndex++) {
      if (oils[oilIndex] === searchValue ) {
        return true;
@@ -70,8 +70,8 @@ console.log(items(oils, searchValue));// 5. write a function that takes an array
 
   oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil', 'Lavender oil', 'Argan oil', 'Almond oil'];
   replaceValue = ['Lavender oil'];
-items(oils, replaceValue);
-function items(oils, replaceValue) {
+overwritesValue(oils, replaceValue);
+function overwritesValue(oils, replaceValue) {
   for (let oilIndex = 0; oilIndex < oils.length; oilIndex++) { oils[oilIndex] = replaceValue
    console.log(oils[oilIndex]);                       }
 }
@@ -82,11 +82,11 @@ oils = ['Coconut oil', 'PalmKernel oil', 'Olive oil', 'Avocado oil', 'Papaya oil
 searchValue = 'Lavender oil';
 replaceValue = 'Argan oil'
 
-function items(oils, searchValue, replaceValue) {
+function overwritesSearchValue(oils, searchValue, replaceValue) {
   for (let oilIndex = 0; oilIndex < oils.length; oilIndex++) {
      if (oils[oilIndex] === searchValue ) { oils[oilIndex] = replaceValue
-     console.log(oils[oilIndex]) 
+     console.log(oils[oilIndex])
 
   }                                                           }
 }
-items(oils, searchValue, replaceValue);
+overwritesSearchValue(oils, searchValue, replaceValue);
