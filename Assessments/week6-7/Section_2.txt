@@ -20,7 +20,7 @@ Name value pairs are names with characteristic values which are unique to the na
 
 5. What is an Object?
 
-An object is a library of name/value pairs which it stores.
+An object is a library of name/value pairs.
 
 6. What does it mean that something is "Global"?
 
@@ -46,4 +46,4 @@ Jvascript runs in a single threaded manner in that it executes one line of comma
 
 Synchronous means executing one line of code at a time and in order which is typical of javaScript while,
 
-Asynchronous means executing more than one code at a time which is typical of a browser running javaScript codes.
+Asynchronous means executing more than one code at a time which is typical of a browser running javaScript codes and other pieces of code.

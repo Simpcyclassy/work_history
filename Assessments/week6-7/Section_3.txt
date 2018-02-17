@@ -4,12 +4,40 @@ Fill free to provide examples to help illustrate your train of thought.
 
 1. Javascript is a dynamically typed language. What does this mean?
 
+It means that javaScript is able to know the data type assigned to a variable during execution without being stated with a keyword like in some other languages.
+
 2. What is a primitive type? Explain each primitive type.
+
+It is a data type that represents a single value, these does not include objects but can be converted to objects apart from 'undefined' and 'null'. They include;
+
+undefined: A type which has no value assigned to its variable.
+
+boolean: A logical entity with two values; true and false.
+
+null: It is used to represent an intentional absence of any value.
+
+number: It is the numeric type in javaScript.
+
+string: It is the type that is used to represent text kind of data. It is surrounded by quotation marks ('' or "").
+
+symbol: It is a data type used when the propety is intended to be private.
 
 3. What are operators and operands?
 
+It is a special function written in between values that allow different operations like addition, multiplication, equality etc.
+
+Operands are the codes that surround the operator which it performs operation on.
+
 4. In what order does operators get called?
+
+Operators are called from left-to-right or right-to-left depending on its associativity.
 
 5. What does it mean when a value is coerced?
 
+It means that the data type of a variable has been dynamically changed during comparison.
+
 6. What is the difference between '==' and '==='?
+
+'==' checks if two values are equal
+
+'===' checks if two values are strictly equal
