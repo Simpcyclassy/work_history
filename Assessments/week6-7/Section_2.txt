@@ -1,14 +1,20 @@
 In this assessment, you will use will be tested on your knowledge of javascript
 concepts from Section 2 of the video lectures. Answer them in YOUR OWN WORDS.
-Fill free to provide examples to help illustrate your train of thought.
+Feel free to provide examples to help illustrate your train of thought.
 
 1. What is a syntax parser?
 
-A syntax parser is a program that evaluates one's code in order to determine its validity syntactically in a way the computer can understand.
+A syntax parser is a program that evaluates one's code in order to determine its validity syntactically and translate in a way the computer can understand.
 
 2. What is a lexical environment?
 
-A lexical environment is where a code is written in which the environment/function surrounding it determines what it does.
+A lexical environment is where a code is written and the environment/function surrounding it determines what it does.
+
+eg
+function assessment() {
+  let environment = 'atom';
+}
+ lexically, the variable environment is sitting inside the assessment function which is the environment.
 
 3. What is the execution context?
 
@@ -17,27 +23,68 @@ The execution context manages which lexical environment that is currently runnin
 4. What are name/value pairs?
 
 Name value pairs are names with characteristic values which are unique to the names.
+eg
+const myName = 'Chioma';
+
+myName is the name while 'Chioma' is the value.
 
 5. What is an Object?
 
 An object is a library of name/value pairs.
 
+myProfile: {
+          Name: {
+          firstName: 'Chioma',
+          middleName: 'Adaku'
+        }
+          Age: 22,
+          Size: 10,
+          Height: 5'7"
+
+}
+
+myProfile in the above is the object name while the properties inside are the name/value pairs.
+
 6. What does it mean that something is "Global"?
 
-A code is Global if it is not inside any function.
+A code is Global if it is not inside any function. It is accessible from anywhere in the code.
 
 7. Explain how hoisting works in Javascript.
 
-In the running of the execution context during the creation phase, a memory space is set-up specially for functions and variables.
-The functions and its entirety is placed into memory space unlike the variable which just takes a placeholder(undefined) until the line by line execution when the value is finally set from the code.
+In the running of the execution context during the creation phase, a memory space is set-up specially for functions and variables. The functions and its entirety is placed into memory space unlike the variable which just takes a placeholder(undefined) until the line by line execution when the value is finally set from the code.
+
+eg
+console.log(b
+
+let b = 'Meet Simpcy';
+// returns undefined
+
+while
+profile(Simpcy)
+
+function profile(name) {
+  console.log('Meet' + name);
+}
+//outputs Simpcy is not defined
+
+profile()
+
+function profile() {
+  console.log('Meet Simpcy');
+}
+//outputs Meet Simpcy
 
 8. What does undefined mean?
 
 Undefined means that a variable has no value set to it.
 
+let a;
+console.log(a);
+//returns undefined
+
 9. Explain the concept of Scope?
 
-Scope is used to express where a variable/function is accessed. It could be a global scope or a block scope.
+Scope is used to express where a variable/function is accessed. It could be a global scope when not found inside a function or a block scope when inside a block of code.
 
 10. Javascript is single threaded. What does this mean?
 
