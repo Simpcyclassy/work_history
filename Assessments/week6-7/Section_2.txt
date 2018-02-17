@@ -28,7 +28,8 @@ A code is Global if it is not inside any function.
 
 7. Explain how hoisting works in Javascript.
 
-In the running of the execution context during the creation phase, a memory space is set-up specially for functions and variables. The functions and its entirety is placed into memory space unlike the variable which just takes a placeholder(undefined) until the line by line execution when the value is finally set from the code.
+In the running of the execution context during the creation phase, a memory space is set-up specially for functions and variables.
+The functions and its entirety is placed into memory space unlike the variable which just takes a placeholder(undefined) until the line by line execution when the value is finally set from the code.
 
 8. What does undefined mean?
 
