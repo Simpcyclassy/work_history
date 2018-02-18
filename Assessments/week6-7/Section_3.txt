@@ -1,10 +1,10 @@
 In this assessment, you will use will be tested on your knowledge of javascript
 concepts from Section 3 of the video lectures. Answer them in YOUR OWN WORDS.
-Fill free to provide examples to help illustrate your train of thought.
+Feel free to provide examples to help illustrate your train of thought.
 
 1. Javascript is a dynamically typed language. What does this mean?
 
-It means that javaScript is able to know the data type assigned to a variable during execution without being stated with a keyword like in some other languages.
+It means that javaScript is able to read and identify the data type assigned to a variable during execution without being stated with a keyword like in some other languages.
 
 2. What is a primitive type? Explain each primitive type.
 
@@ -20,24 +20,53 @@ number: It is the numeric type in javaScript.
 
 string: It is the type that is used to represent text kind of data. It is surrounded by quotation marks ('' or "").
 
-symbol: It is a data type used when the propety is intended to be private.
+symbol: It is a data type used when the property is intended to be private.
 
 3. What are operators and operands?
 
-It is a special function written in between values that allow different operations like addition, multiplication, equality etc.
+Operators are special functions written in between values that allow different operations like addition, multiplication, equality etc.
 
 Operands are the codes that surround the operator which it performs operation on.
 
-4. In what order does operators get called?
+eg
+const a = 22 * 5;
 
-Operators are called from left-to-right or right-to-left depending on its associativity.
+* is an operator while,
+22 and 5 are the operands.
+
+4. In what order does operators get called?
+Operators are called in order of operator precedence (whereby the higher precedence overwrites the lower precedence) and could be called from left-to-right or right-to-left according to its associativity.
+
+eg
+const a = 100 - 360 / 200;
+//returns 98.2
+This is because by operator precedence, division is higher than subtraction
+
+console.log(54 < 68 < 31);
+//returns true based on associativity
 
 5. What does it mean when a value is coerced?
 
 It means that the data type of a variable has been dynamically changed during comparison.
 
+let a = '68', b = 54;
+
+console.log(a + b);
+//returns 6854
+This is because 54 was coerced to a string.
+
 6. What is the difference between '==' and '==='?
 
-'==' checks if two values are equal
+'==' checks if two values are equal.
 
-'===' checks if two values are strictly equal
+'===' checks if two values are strictly equal.
+
+let a = 31;
+
+let b = '31';
+
+console.log(a == b);
+//returns true
+
+console.log(a === b);
+//returns false
