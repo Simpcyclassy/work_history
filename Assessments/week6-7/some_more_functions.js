@@ -21,6 +21,24 @@
   // sample input: "Hello World"
   // sample output: 3
 
+const vowels = 'aeiou';
+
+function numberofVowelsCount(input) {
+  let output = 0;
+
+  for (let inputIndex = 0; inputIndex < input.length; inputIndex++) {
+    for (let vowelIndex = 0; vowelIndex < vowels.length; vowelIndex++) {
+      if (input[inputIndex] === vowels[vowelIndex]) {
+      output++
+      }
+    }
+  }
+  return output;
+
+}
+console.log(numberofVowelsCount('Hello World'))
+
+
 // 2. write a function that takes a string as it first parameter. This function
 // return a new string with the first 3 letters lower-cased. If the string is less
 // than 3 letters long, this function will return the new string with all letters
@@ -31,6 +49,16 @@
 // EX2:
   // sample input: "he"
   // sample output: "HE"
+  function firstThreeLetterstoLowerCase(string) {
+      if(string.length >= 3) {
+    return string.slice(0, 3).toLowerCase() + string.slice(3).toUpperCase();
+       }
+   else (string.length < 3){
+     return  string.toUpperCase();
+    }
+
+  }
+
 
 // 3. write a function that takes a string as it first parameter. This function
 // returns the first half of the string if the string is even length. Otherwise,
@@ -41,15 +69,32 @@
 // EX2:
   // sample input: "Hello World"
   // sample output: null
+  function returnsHalfofStringElWhenIsEven(string) {
+         if (string.length % 2 === 0) {
+
+             return string.slice(0, string.length / 2);
+         }
+         else{
+             return null;
+              }
+   }
 
 // 4. write a function that takes an array of numbers as its first parameter.
 // This function returns the sum of the numbers in the array
 // EX:
   // sample input: [1, 7, 1, 4, 1, 6, 4, 5]
   // sample output: 29
+  function returnsSumofArray(array) {
 
+  var sum = 0;
+
+  for (var arrayIndex = 0; arrayIndex < array.length; arrayIndex++) {
+    sum += array[arrayIndex]
+  }
+    return sum;
+  }
 // 5. write a function that takes an array of numbers as its first parameter.
-// This function returns an the number that is the most frequent in the array
+// This function returns the number that is the most frequent in the array
 // EX:
   // sample input: [1, 7, 1, 4, 1, 6, 4, 5]
   // sample output: 1
