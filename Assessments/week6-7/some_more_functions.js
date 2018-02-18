@@ -98,3 +98,23 @@ console.log(numberofVowelsCount('Hello World'))
 // EX:
   // sample input: [1, 7, 1, 4, 1, 6, 4, 5]
   // sample output: 1
+  function mostFrequent(array) {
+    hash = {};
+
+      for(let arrayIndex = 0 ;  arrayIndex < array.length; arrayIndex++){
+         hash[array[arrayIndex]] = 0;
+      }
+      for(var j = 0 ;  j < array.length; j++){
+         hash[array[j]] += 1;
+      }
+
+      var highest = array[0];
+       for(var k = 0 ;  k < array.length; k++){
+        if (hash[highest] < hash[array[k]]) {
+          highest = array[k]
+        }
+      }
+      return highest
+  }
+
+   console.log( frequent([1, 7, 1, 4, 1, 6, 4, 5]) )

@@ -54,18 +54,19 @@ A code is Global if it is not inside any function. It is accessible from anywher
 In the running of the execution context during the creation phase, a memory space is set-up specially for functions and variables. The functions and its entirety is placed into memory space unlike the variable which just takes a placeholder(undefined) until the line by line execution when the value is finally set from the code.
 
 eg
-console.log(b
+console.log(b)
 
 let b = 'Meet Simpcy';
 // returns undefined
 
 while
-profile(Simpcy)
+
+profile('Simpcy')
 
 function profile(name) {
   console.log('Meet' + name);
 }
-//outputs Simpcy is not defined
+//outputs Meet Simpcy
 
 profile()
 
