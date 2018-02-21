@@ -191,4 +191,4 @@ Callback function is a function passed into another function as an argument whic
 15. What does call(), apply() and bind() help you control?
 
 They help one control the object that is being pointed at the 'this' keyword.
-The call() and apply() are almost identical in that the two methods calls a function with a given this value arguments provided, the call() provides arguments as list, the apply() provides arguments as an array.
+The call() and apply() are almost identical in that the two methods call a function with a given this value and arguments provided, they differ in that the call() provides arguments as list, the apply() provides arguments as an array.
