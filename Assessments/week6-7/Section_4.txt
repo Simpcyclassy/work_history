@@ -4,31 +4,191 @@ Feel free to provide examples to help illustrate your train of thought.
 
 1. What are the ways to access methods or properties on an object?
 
+Ways to set and access properties and methods include;
+~ The computed member operator which is done using the bracket notation [] writing the name of the value as a string inside the notation.
+eg
+let profile = {
+      name: 'Chioma',
+      weight: '63kg'
+
+};
+profile['position'] = 'Fifth'
+
+console.log(profile['name']);
+// outputs Chioma
+
+console.log(profile['position']);
+
+// outputs Fifth
+
+~ The member access which uses the dot operator (.)
+
+let profile = {
+      name: 'Chioma',
+      weight: '63kg'
+
+};
+
+profile.position = 'Fifth'
+
+console.log(profile.name);
+// outputs Chioma
+
+console.log(profile.position);
+// outputs Fifth
+
 2. How do you initialize an Object literal?
+
+ Curly braces {} are used to initialize Object literal.
 
 3. What is a Namespace? How does Javascript handle Namespacing?
 
+A Namespace is a declarative region typically to keep variables and functions with the same name separate in order to avoid collision in the global scope.
+
+Javasript handles Namespacing by creating an object which serves as a container and setting each variable to an object
+
+var language = 'javaScript';
+var language = 'CSS';
+
+console.log(language);
+//outputs CSS
+
+var script = {};
+var stylesheets = {};
+
+script.language = 'javascript';
+
+stylesheets.language = 'CSS';
+
+console.log(script.language);
+//outputs javascript
+
+console.log(stylesheets.language);
+//outputs CSS
+
 4. What is a JSON? What are some of the Javascript functions used to parse and encode JSON?
+
+JSON means Javascript Object Notation. It is very similar to Javascript Object Literal syntax and is in fact inspired by it and technically a subset of it. Basic difference is that the properties in JSON are all wrapped and in consistent quotes inside the braces.
+
+Anything JSON valid is also Javascript Object Notation valid but not everything Javascript Object Notation valid is JSON valid because JSON has stricter rules.
+
+ Javscript uses the JSON.stingify method to parse from object literals to JSON and uses the JSON.parse method to convert from JSON to object literals
+
+eg
+var objectLiteral = {
+    firstname: 'Chioma',
+    isAProgrammer: true
+}
+
+console.log(JSON.stringify(objectLiteral));
+// converts to JSON
+
+// outputs {"firstname":"Chioma","isAProgrammer":true}
+
+var jsonValue = JSON.parse('{ "firstname": "Chioma", "isAProgrammer": true }');
+//converts to object
+
+console.log(jsonValue);
+
+//outputs{firstname: "Chioma", isAProgrammer: true}
+
 
 5. What are first class functions?
 
+It means that functions are special types of objects and that everything you can do with other types can as well be done with functions can be assigned variables and codes which have return values. It can take primitives, funtions, objects, codes and can have a name or be anonymous.
+
 6. Explain the difference between a function statement and expression.
+A function statement is a code that doesn't return a value, it just works. It is placed into memory space until and gets executed when invoked. A function statement gets hoisted.
+eg
+function write() {
+      console.log('Hi!');
+}
+
+A function expression is a unit code that returns a value. It creates as object on the fly. A function expression doesn't get hoisted. It is set to the default primitive undefined.
+It could be set to a variable,
+let a;
+a = 3
+// returns 3
+
+1 + 2;
+// returns 3
+
+a = 3; and 1 + 2; are both expressions.
 
 7. What does it mean to be passed by value? What types are passed by value?
 
+When a variable is passed by value, the value is passed to a variable or function to a new address which saves a copy of the value in a new memory space as a new value, while the variable retains the value in its original location in memory.
+Primitive types are passed by value
+
+let a = 3;
+let b;
+
+b = a;
+a = 2;
+
+console.log(a);
+// prints 2
+console.log(b);
+// prints 3
+
 8. What does it mean to be passed by reference? What types are passed by reference?
+
+When an object variable or function is passed by reference, the object is passed to a new variable or function which doesn't create a copy or new object in a new memory space but gets set to the object at the same location. It can be likened to the object having two aliases.
+All objects and functions can be passed by reference
+
+let c = { greeting: 'hi' };
+let d;
+
+d = c;
+c.greeting = 'hello'; // mutate
+
+console.log(c);
+// prints greeting : "hello"
+
+console.log(d);
+// prints greeting : "hello"
 
 9. What is the `this` variable?
 
+`this` is a variable that's available at the global level and points to the global object (Window Object). It can be used to set a variable in an object to the global space. When it sits inside a method in an object, it becomes the new object that holds the method and the keyword can be used to reset values in the object when in a method.
+
 10. What is an array? How are they different in Javascript than in other languages?
 
-11. What are function arguments? What is the keyword that Javascript gives you to
-access a function's arguments?
+An array is a collection of items.
+Unlike in other languages where an array has to take a particular type (eg an array of numbers, an array of objects, an array of strings, etc) , JavaScript which is dynamically typed can take different types and figures out each type and can mix and match each item in an array.
+
+11. What are function arguments? What is the keyword that Javascript gives you to access a function's arguments?
+
+Arguments are a list of all the values of the parameters passed to a function that is being called during execution.
+
+Javscript uses the keyword 'arguments' and logs a list of all the values of the parameters passed inside an italicized brackets in an array-like manner.
 
 12. What is an IIFE? How can they be useful?
 
+An IIFE means an Immediately Invoked Function Expression. They are useful because they call or invoke the function expression immediately after the code thereby making function execution easier.
+
+eg
+var firstname = 'Chioma';
+
+(function(name) {
+
+   let greeting = 'The IIFE way: Hello';
+   console.log(greeting + ' ' + name);
+
+}(firstname));
+// logs The IIFE way: Hello Chioma
+
 13. Explain closures. How can you use them to your advantage in Javascript?
+
+This feature is extraordinarily important and powerful and that javaScriptrelies on. Closure is the combination of a function and the lexical environment within which the function was declared. This lexical environment consists of any local variables that were in the same scope at the time the closure was created.
+
+Closures keep the scope intact closing in all the variables it is supposed to have access to make sure that whatever function that is running, it will have access to all the variables it is supposed to have access to, notwithstanding if the outer environment are still running.
 
 14. What is a callback function?
 
+Callback function is a function passed into another function as an argument which is then invoked inside the outer function to complete the action
+
 15. What does call(), apply() and bind() help you control?
+
+They help one control the object that is being pointed at the 'this' keyword.
+The call() and apply() are almost identical in that the two methods calls a function with a given this value arguments provided, the call() provides arguments as list, the apply() provides arguments as an array.
