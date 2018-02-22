@@ -86,9 +86,9 @@ console.log(numberofVowelsCount('Hello World'))
   // sample output: 29
   function returnsSumofArray(array) {
 
-  var sum = 0;
+  let sum = 0;
 
-  for (var arrayIndex = 0; arrayIndex < array.length; arrayIndex++) {
+  for (let arrayIndex = 0; arrayIndex < array.length; arrayIndex++) {
     sum += array[arrayIndex]
   }
     return sum;
@@ -104,12 +104,12 @@ console.log(numberofVowelsCount('Hello World'))
       for(let arrayIndex = 0 ;  arrayIndex < array.length; arrayIndex++){
          hash[array[arrayIndex]] = 0;
       }
-      for(var j = 0 ;  j < array.length; j++){
+      for(let j = 0 ;  j < array.length; j++){
          hash[array[j]] += 1;
       }
 
-      var highest = array[0];
-       for(var k = 0 ;  k < array.length; k++){
+      let highest = array[0];
+       for(let k = 0 ;  k < array.length; k++){
         if (hash[highest] < hash[array[k]]) {
           highest = array[k]
         }

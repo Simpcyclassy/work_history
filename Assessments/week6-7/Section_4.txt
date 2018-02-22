@@ -180,7 +180,7 @@ var firstname = 'Chioma';
 
 13. Explain closures. How can you use them to your advantage in Javascript?
 
-This feature is extraordinarily important and powerful and that javaScriptrelies on. Closure is the combination of a function and the lexical environment within which the function was declared. This lexical environment consists of any local variables that were in the same scope at the time the closure was created.
+This is an extraordinarily important and powerful feature that javaScript relies on. Closure is the combination of a function and the lexical environment within which the function was declared. This lexical environment consists of any local variables that were in the same scope at the time the closure was created.
 
 Closures keep the scope intact closing in all the variables it is supposed to have access to make sure that whatever function that is running, it will have access to all the variables it is supposed to have access to, notwithstanding if the outer environment are still running.
 
