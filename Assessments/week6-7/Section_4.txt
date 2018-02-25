@@ -72,7 +72,7 @@ JSON means Javascript Object Notation. It is very similar to Javascript Object L
 
 Anything JSON valid is also Javascript Object Notation valid but not everything Javascript Object Notation valid is JSON valid because JSON has stricter rules.
 
- Javscript uses the JSON.stingify method to parse from object literals to JSON and uses the JSON.parse method to convert from JSON to object literals
+ Javscript uses the JSON.stingify method to encode from object literals to JSON and uses the JSON.parse method to convert from JSON to object literals
 
 eg
 var objectLiteral = {
@@ -117,7 +117,7 @@ a = 3; and 1 + 2; are both expressions.
 
 7. What does it mean to be passed by value? What types are passed by value?
 
-When a variable is passed by value, the value is passed to a variable or function to a new address which saves a copy of the value in a new memory space as a new value, while the variable retains the value in its original location in memory.
+When a variable is passed by value, the value is passed to a variable in a new address which saves a copy of the value in a new memory space as a new value, while the variable retains the value in its original location in memory.
 Primitive types are passed by value
 
 let a = 3;

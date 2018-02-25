@@ -10,11 +10,11 @@ It means that javaScript is able to read and identify the data type assigned to 
 
 It is a data type that represents a single value, these does not include objects but can be converted to objects apart from 'undefined' and 'null'. They include;
 
-undefined: A type which has no value assigned to its variable.
+undefined: A type which has no value assigned to its variable. This is what javascript assigns all variables by default.
 
 boolean: A logical entity with two values; true and false.
 
-null: It is used to represent an intentional absence of any value.
+null: It is used to represent an intentional absence of any value. Only a programmer can set a value to null
 
 number: It is the numeric type in javaScript.
 
@@ -57,9 +57,9 @@ This is because 54 was coerced to a string.
 
 6. What is the difference between '==' and '==='?
 
-'==' checks if two values are equal.
+'==' checks if two values are equal. Values can be coerced to a different type in the process of checking equality. A string could be coerced to a number or vice versa, null type is coerced to a boolean etc.
 
-'===' checks if two values are strictly equal.
+'===' checks if two values are strictly equal. It does not take the value of a coerced type as true. It only returns true if values are of the same type and equal or true.
 
 let a = 31;
 

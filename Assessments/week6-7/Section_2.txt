@@ -93,6 +93,6 @@ Jvascript runs in a single threaded manner in that it executes one line of comma
 
 11. What is the difference between synchronous and asynchronous?
 
-Synchronous means executing one line of code at a time and in order which is typical of javaScript while,
+Synchronous means executing one line of code at a time and in order while,
 
-Asynchronous means executing more than one code at a time which is typical of a browser running javaScript codes and other pieces of code.
+Asynchronous means executing more than one code at a time which could be a result of click events or getting data outside of javascript which create callback functions

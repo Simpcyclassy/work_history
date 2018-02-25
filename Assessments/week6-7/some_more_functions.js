@@ -21,9 +21,8 @@
   // sample input: "Hello World"
   // sample output: 3
 
-const vowels = 'aeiou';
-
 function numberofVowelsCount(input) {
+  const vowels = 'aeiou';
   let output = 0;
 
   for (let inputIndex = 0; inputIndex < input.length; inputIndex++) {
@@ -51,7 +50,7 @@ console.log(numberofVowelsCount('Hello World'))
   // sample output: "HE"
   function firstThreeLetterstoLowerCase(string) {
       if(string.length >= 3) {
-    return string.slice(0, 3).toLowerCase() + string.slice(3).toUpperCase();
+    return string.slice(0, 3).toLowerCase();
        }
    else (string.length < 3){
      return  string.toUpperCase();
@@ -70,9 +69,10 @@ console.log(numberofVowelsCount('Hello World'))
   // sample input: "Hello World"
   // sample output: null
   function returnsHalfofStringElWhenIsEven(string) {
-         if (string.length % 2 === 0) {
+         const stringLength = string.length
+         if (stringLength % 2 === 0) {
 
-             return string.slice(0, string.length / 2);
+             return string.slice(0, stringLength / 2);
          }
          else{
              return null;
@@ -99,22 +99,18 @@ console.log(numberofVowelsCount('Hello World'))
   // sample input: [1, 7, 1, 4, 1, 6, 4, 5]
   // sample output: 1
   function mostFrequent(array) {
-    hash = {};
+   const hash = {};
+    let arrayIndex = 0;
 
-      for(let arrayIndex = 0 ;  arrayIndex < array.length; arrayIndex++){
-         hash[array[arrayIndex]] = 0;
-      }
-      for(let j = 0 ;  j < array.length; j++){
-         hash[array[j]] += 1;
-      }
+     for(arrayIndex ;  arrayIndex < array.length; arrayIndex++){
+        hash[array[arrayIndex]] += 1;
+     }
 
-      let highest = array[0];
-       for(let k = 0 ;  k < array.length; k++){
-        if (hash[highest] < hash[array[k]]) {
-          highest = array[k]
-        }
-      }
-      return highest
-  }
+     let highest = array[0];
 
-   console.log( frequent([1, 7, 1, 4, 1, 6, 4, 5]) )
+       if (hash[highest] < hash[array[arrayIndex]]) {
+         highest = array[arrayIndex]
+       }
+
+     return highest;
+ }
